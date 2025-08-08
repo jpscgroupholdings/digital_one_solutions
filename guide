@@ -1,0 +1,71 @@
+DO - Stephanie, [4/21/2025 5:51 PM]
+SERVICES
+
+Cloud Computing
+   - Elastic Compute Service (ECS): Scalable compute capacity in the cloud, suitable for running applications, websites, and data processing.
+   - Server Load Balancer (SLB): Distributes incoming traffic to multiple ECS instances, ensuring high availability and scalability.
+   - Elastic High Performance Computing (E-HPC): High-performance cloud computing for running large-scale applications, like scientific computing and simulations.
+
+2. Cloud Storage
+   - Object Storage Service (OSS): Scalable and secure storage service for managing large amounts of data, including media files, backups, and archives.
+   - Cloud Storage Gateway (CSG): Integrates on-premise storage with Alibaba Cloud, allowing businesses to bridge their private cloud with the public cloud.
+
+3. Networking & CDN
+   - Alibaba Cloud CDN: Content delivery network that accelerates the distribution of content to end-users globally, reducing latency and improving performance.
+   - Virtual Private Cloud (VPC): Secure and isolated cloud network that enables businesses to deploy applications with private IP addresses.
+   - Express Connect: A dedicated connection between your on-premise data center and Alibaba Cloud, improving speed and security.
+
+4. Database Solutions
+   - ApsaraDB for RDS (Relational Database Service): Fully managed relational databases supporting MySQL, SQL Server, PostgreSQL, and MariaDB.
+   - ApsaraDB for Redis: High-performance, in-memory database service used for caching and real-time applications.
+   - PolarDB: A high-performance cloud-native database compatible with MySQL, PostgreSQL, and Oracle.
+
+ 5. Security
+   - Alibaba Cloud Web Application Firewall (WAF): Protects applications from malicious attacks, including SQL injection and DDoS attacks.
+   - Anti-DDoS Protection: Safeguards your network from distributed denial-of-service attacks with scalable defenses.
+   - Cloud Firewall: A highly secure, customizable firewall that monitors and filters incoming traffic to your cloud resources.
+
+6. AI & Machine Learning
+   - MaxCompute: Big data processing platform that enables high-performance data analysis and machine learning workflows.
+   - Alibaba Cloud Machine Learning Platform for AI (PAI): A suite of tools for building, training, and deploying machine learning models.
+   - Intelligent Speech Interaction (Aliyun AI): Offers natural language processing (NLP) and speech recognition capabilities for smarter interaction with data.
+
+7. Big Data Solutions
+   - DataV: A data visualization platform that helps businesses visualize big data insights in an intuitive and interactive manner.
+   - AnalyticDB: A fully managed, distributed database designed for real-time data analytics at scale.
+   - DataWorks: A cloud-native big data development platform that supports data integration, governance, and analysis.
+
+8. IoT Solutions
+   - IoT Platform: A fully managed cloud platform that allows businesses to connect, manage, and analyze IoT devices in real-time.
+   - LinkWAN: A low-power wide-area network (LPWAN) solution for IoT deployments.
+
+9. Blockchain Solutions
+   - Alibaba Cloud Blockchain as a Service (BaaS): A fully managed service for building and managing blockchain applications with high scalability and reliability.
+   - Hyperledger Fabric: Blockchain framework for developing distributed ledger applications.
+
+10. DevOps & CI/CD
+   - Alibaba Cloud DevOps: Tools for continuous integration and continuous deployment, helping to streamline software development processes.
+   - Cloud Container Engine (CCE): Kubernetes-based container management service for scaling containerized applications.
+   - Alibaba Cloud CodePipeline: Continuous integration and deployment service that automates the delivery pipeline.
+
+11. Enterprise Applications
+   - Enterprise Distributed Application Service (EDAS): A platform for deploying and managing Java applications in the cloud, including
+
+DO - Stephanie, [4/21/2025 5:51 PM]
+microservices.
+   - Alibaba Cloud AppStream: A service that allows businesses to stream applications securely to end-users with no local installation required.
+
+12. Cloud Migration & Hybrid Cloud
+   - Cloud Migration Services: A comprehensive set of tools and services for seamlessly migrating your on-premises infrastructure to Alibaba Cloud.
+   - Hybrid Cloud Solutions: Enables businesses to run applications across both on-premise and cloud environments with unified management.
+
+13. SAP on Alibaba Cloud
+   - SAP HANA on Alibaba Cloud: A managed service for running SAP HANA workloads in the cloud for real-time analytics and business operations.
+   - SAP Business One on Alibaba Cloud: An ERP solution specifically designed for small and medium businesses, deployed in the cloud.
+
+14. Global Data Centers
+   - Alibaba Cloud Global Network: Access to a wide range of data centers located around the world for global expansion and data sovereignty.
+
+15. Compliance & Governance
+   - Alibaba Cloud Governance Framework: Tools and services that ensure your cloud resources are properly managed, compliant, and secure.
+   - Compliance Certifications: Alibaba Cloud complies with international security standards such as ISO 27001, GDPR, and SOC2.
