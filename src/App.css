@@ -155,11 +155,14 @@ img {
   left: 0;
   right: 0;
   z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   padding: 16px 0;
   transition: var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow-sm);
   padding: 10px 0;
@@ -173,8 +176,11 @@ img {
   justify-content: space-between;
 }
 .nav-logo img {
-  height: 42px;
+  height: 64px;
   width: auto;
+}
+.navbar.scrolled .nav-logo img {
+  filter: none;
 }
 .nav-links {
   display: flex;
@@ -184,7 +190,7 @@ img {
 .nav-links a {
   font-size: 0.95rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-secondary);
   transition: var(--transition);
   position: relative;
 }
@@ -192,7 +198,7 @@ img {
   color: var(--text-secondary);
 }
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 .navbar.scrolled .nav-links a:hover {
   color: var(--primary);
@@ -204,7 +210,7 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent);
+  background: var(--primary);
   transition: var(--transition);
 }
 .navbar.scrolled .nav-links a::after {
@@ -240,7 +246,7 @@ img {
 .hamburger span {
   width: 24px;
   height: 2px;
-  background: var(--text-light);
+  background: var(--text-primary);
   transition: var(--transition);
 }
 .navbar.scrolled .hamburger span {
@@ -606,13 +612,10 @@ img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
   transition: var(--transition);
 }
 .partner-card:hover .partner-logo img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 .partner-card h3 {
   font-size: 1.2rem;
