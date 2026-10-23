@@ -70,7 +70,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
         <a href="#hero" className="nav-logo">
-          <img src="/digitalsolutionlogo.png" alt="Digital One Solutions" />
+          <img src="/new-dgone.png" alt="Digital One Solutions" />
         </a>
         <button
           className="hamburger"
@@ -1014,7 +1014,7 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/digitalsolutionlogo.png" alt="Digital One Solutions" />
+            <img src="/new-dgone.png" alt="Digital One Solutions" />
             <p>Cloud. AI. Digital Business.</p>
             <p className="footer-tagline">
               The digital technology arm of JP Group.
