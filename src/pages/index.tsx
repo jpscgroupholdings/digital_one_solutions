@@ -11,7 +11,7 @@ export default function Index() {
           <li>Workplace</li>
         </ul>
       </nav>
-      <img src="digitalsolutionlogo.png" width="150" height="auto"></img>
+      <img src="new-dgone.png" width="150" height="auto"></img>
       <div>
         <a href="#">Get Started</a>
       </div>

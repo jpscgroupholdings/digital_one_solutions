@@ -109,7 +109,7 @@ function Navbar() {
             setTimeout(() => scrollToSection("hero"), 100);
           }}
         >
-          <img src="/digitalsolutionlogo.png" alt="Digital One Solutions" />
+          <img src="/new-dgone.png" alt="Digital One Solutions" />
         </button>
         <button
           className="hamburger"
