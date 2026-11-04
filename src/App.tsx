@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { HashRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 
 // Scroll-into-view hook
@@ -20,7 +21,7 @@ function useInView(threshold = 0.15) {
   return { ref, visible };
 }
 
-function FadeIn({
+export function FadeIn({
   children,
   className = "",
   delay = 0,
@@ -45,6 +46,7 @@ function FadeIn({
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
@@ -58,6 +60,26 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleNav = (href: string) => {
+    setMenuOpen(false);
+    const id = href.replace("#", "");
+    if (window.location.hash === "#/" || window.location.hash === "" || window.location.hash === "#") {
+      scrollToSection(id);
+    } else {
+      navigate("/");
+      setTimeout(() => scrollToSection(id), 200);
+    }
+  };
+
   const links = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
@@ -69,9 +91,16 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
-        <a href="#hero" className="nav-logo">
+        <button
+          className="nav-logo"
+          onClick={() => {
+            setMenuOpen(false);
+            navigate("/");
+            setTimeout(() => scrollToSection("hero"), 100);
+          }}
+        >
           <img src="/digitalsolutionlogo.png" alt="Digital One Solutions" />
-        </a>
+        </button>
         <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -84,19 +113,18 @@ function Navbar() {
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           {links.map((l) => (
             <li key={l.label}>
-              <a href={l.href} onClick={() => setMenuOpen(false)}>
+              <button onClick={() => handleNav(l.href)}>
                 {l.label}
-              </a>
+              </button>
             </li>
           ))}
           <li>
-            <a
-              href="#contact"
+            <button
               className="nav-cta"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => handleNav("#contact")}
             >
               Get Started
-            </a>
+            </button>
           </li>
         </ul>
       </div>
@@ -725,6 +753,8 @@ function Services() {
 
 // ─── TECHNOLOGY PARTNERS ──
 function Partners() {
+  const navigate = useNavigate();
+
   const partners = [
     {
       name: "Alibaba Cloud",
@@ -740,11 +770,13 @@ function Partners() {
       name: "Lark",
       logo: "/lark.png",
       desc: "Integrated workplace collaboration, communication, productivity, and workflow automation.",
+      learnMore: "/lark",
     },
     {
-      name: "ByteDance",
-      logo: "/bytedance.png",
+      name: "BytePlus",
+      logo: "/byteplus.png",
       desc: "Technology and digital solutions supporting AI, data, content, marketing, and customer engagement.",
+      learnMore: "/byteplus",
     },
   ];
 
@@ -771,6 +803,14 @@ function Partners() {
                 </div>
                 <h3>{p.name}</h3>
                 <p>{p.desc}</p>
+                {p.learnMore && (
+                  <button
+                    className="btn btn-partner-learn-more"
+                    onClick={() => navigate(p.learnMore!)}
+                  >
+                    Learn More
+                  </button>
+                )}
               </div>
             </FadeIn>
           ))}
@@ -1060,7 +1100,7 @@ function Footer() {
               <li>Alibaba Cloud</li>
               <li>AWS</li>
               <li>Lark</li>
-              <li>ByteDance</li>
+              <li>BytePlus</li>
             </ul>
           </div>
         </div>
@@ -1079,10 +1119,20 @@ function Footer() {
 }
 
 // ─── APP ───
-export default function App() {
+import LarkPage from "./pages/LarkPage";
+import BytePlusPage from "./pages/BytePlusPage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+function HomePage() {
   return (
-    <div className="app">
-      <Navbar />
+    <>
       <Hero />
       <About />
       <Services />
@@ -1091,7 +1141,23 @@ export default function App() {
       <Approach />
       <CtaBanner />
       <Contact />
-      <Footer />
-    </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <div className="app">
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/lark" element={<LarkPage />} />
+          <Route path="/byteplus" element={<BytePlusPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </HashRouter>
   );
 }

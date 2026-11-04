@@ -175,6 +175,12 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+.nav-logo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
 .nav-logo img {
   height: 64px;
   width: auto;
@@ -187,23 +193,33 @@ img {
   align-items: center;
   gap: 32px;
 }
-.nav-links a {
+.nav-links a,
+.nav-links button {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: var(--transition);
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
-.navbar.scrolled .nav-links a {
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .nav-links button {
   color: var(--text-secondary);
 }
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links button:hover {
   color: var(--primary);
 }
-.navbar.scrolled .nav-links a:hover {
+.navbar.scrolled .nav-links a:hover,
+.navbar.scrolled .nav-links button:hover {
   color: var(--primary);
 }
-.nav-links a::after {
+.nav-links a::after,
+.nav-links button::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -213,10 +229,12 @@ img {
   background: var(--primary);
   transition: var(--transition);
 }
-.navbar.scrolled .nav-links a::after {
+.navbar.scrolled .nav-links a::after,
+.navbar.scrolled .nav-links button::after {
   background: var(--primary);
 }
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links button:hover::after {
   width: 100%;
 }
 .nav-cta {
@@ -629,6 +647,264 @@ img {
   line-height: 1.6;
 }
 
+/* ─── PARTNER LEARN MORE BUTTON ─── */
+.btn-partner-learn-more {
+  margin-top: 16px;
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-partner-learn-more:hover {
+  background: var(--primary);
+  color: var(--text-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─── PARTNER PAGES ─── */
+.partner-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  padding: 140px 24px 80px;
+  overflow: hidden;
+}
+.partner-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--bg-primary);
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+}
+.partner-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.partner-hero-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-md);
+  padding: 20px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.partner-hero-logo {
+  height: 80px;
+  width: auto;
+}
+.partner-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+.partner-hero-content h1 .highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.partner-hero-content p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* Partner About */
+.partner-about {
+  background: var(--bg-primary);
+}
+.partner-about-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.partner-about-text p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Partner Solutions */
+.partner-solutions {
+  background: var(--bg-section-alt);
+}
+.solution-card {
+  background: var(--bg-primary);
+  border: 1px solid rgba(0, 128, 198, 0.08);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  transition: var(--transition);
+}
+.solution-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 128, 198, 0.2);
+  transform: translateX(4px);
+}
+.solution-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.3;
+  line-height: 1;
+  min-width: 48px;
+}
+.solution-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.solution-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Partner Benefits */
+.partner-benefits {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+.partner-benefits .section-label {
+  background: rgba(0, 212, 255, 0.15);
+  color: var(--accent);
+}
+.partner-benefits .section-header h2 {
+  color: var(--text-light);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: var(--transition);
+}
+.benefit-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 128, 198, 0.3);
+  transform: translateY(-4px);
+}
+.benefit-card:hover::before {
+  opacity: 1;
+}
+.benefit-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+.benefit-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.benefit-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+/* Partner CTA Section */
+.partner-cta-section {
+  background: var(--bg-primary);
+}
+.partner-cta-card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(0, 128, 198, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.partner-cta-card h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+.partner-cta-card p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.partner-cta-card strong {
+  color: var(--primary);
+}
+
+/* Partner Final CTA */
+.partner-final-cta {
+  background: var(--gradient-hero);
+  padding: 80px 0;
+}
+.partner-final-cta .cta-content {
+  text-align: center;
+  color: var(--text-light);
+}
+.partner-final-cta .cta-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.partner-final-cta .cta-tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.partner-final-cta .cta-desc {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
 /* ─── WHY DIGITAL ONE ─── */
 .why-dos {
   background: var(--bg-dark);
@@ -989,7 +1265,8 @@ img {
   .nav-links.open {
     right: 0;
   }
-  .nav-links a {
+  .nav-links a,
+  .nav-links button {
     font-size: 1.1rem;
     color: var(--text-light) !important;
   }
@@ -1053,6 +1330,27 @@ img {
   }
   .approach-arrow {
     display: none;
+  }
+  .partner-hero {
+    min-height: auto;
+    padding: 120px 20px 60px;
+  }
+  .partner-hero-logo-wrap {
+    padding: 14px 24px;
+  }
+  .partner-hero-logo {
+    height: 60px;
+  }
+  .solution-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .partner-cta-card {
+    padding: 32px 24px;
   }
 }
 @media (max-width: 480px) {
