@@ -62,8 +62,8 @@ export default function BytePlusPage() {
             <div className="partner-hero-content">
               <div className="partner-hero-logo-wrap">
                 <img
-                  src="/byteplus.png"
-                  alt="BytePlus"
+                  src="/BytePlus×JPTech.png"
+                  alt="BytePlus × JP Technology"
                   className="partner-hero-logo"
                 />
               </div>

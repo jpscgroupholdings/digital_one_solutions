@@ -60,7 +60,7 @@ export default function LarkPage() {
           <FadeIn>
             <div className="partner-hero-content">
               <div className="partner-hero-logo-wrap">
-                <img src="/lark.png" alt="Lark" className="partner-hero-logo" />
+                <img src="/Lark×DigitalOne.png" alt="Lark × Digital One Solutions" className="partner-hero-logo" />
               </div>
               <h1>
                 One Platform. Smarter Collaboration.{" "}
