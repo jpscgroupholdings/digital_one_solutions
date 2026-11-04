@@ -56,7 +56,7 @@ export default function BytePlusPage() {
   return (
     <>
       {/* Hero */}
-      <section className="partner-hero">
+      <section className="partner-hero byteplus-hero">
         <div className="container">
           <FadeIn>
             <div className="partner-hero-content">
@@ -181,7 +181,7 @@ export default function BytePlusPage() {
       </section>
 
       {/* CTA */}
-      <section className="section partner-final-cta">
+      <section className="section partner-final-cta byteplus-cta">
         <div className="container">
           <FadeIn>
             <div className="cta-content">

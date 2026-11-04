@@ -55,7 +55,7 @@ export default function LarkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="partner-hero">
+      <section className="partner-hero lark-hero">
         <div className="container">
           <FadeIn>
             <div className="partner-hero-content">
@@ -183,7 +183,7 @@ export default function LarkPage() {
       </section>
 
       {/* CTA */}
-      <section className="section partner-final-cta">
+      <section className="section partner-final-cta lark-cta">
         <div className="container">
           <FadeIn>
             <div className="cta-content">
