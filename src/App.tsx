@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { HashRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import {
+  HashRouter,
+  Routes,
+  Route,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 
 // Scroll-into-view hook
@@ -72,7 +78,11 @@ function Navbar() {
   const handleNav = (href: string) => {
     setMenuOpen(false);
     const id = href.replace("#", "");
-    if (window.location.hash === "#/" || window.location.hash === "" || window.location.hash === "#") {
+    if (
+      window.location.hash === "#/" ||
+      window.location.hash === "" ||
+      window.location.hash === "#"
+    ) {
       scrollToSection(id);
     } else {
       navigate("/");
@@ -113,16 +123,11 @@ function Navbar() {
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           {links.map((l) => (
             <li key={l.label}>
-              <button onClick={() => handleNav(l.href)}>
-                {l.label}
-              </button>
+              <button onClick={() => handleNav(l.href)}>{l.label}</button>
             </li>
           ))}
           <li>
-            <button
-              className="nav-cta"
-              onClick={() => handleNav("#contact")}
-            >
+            <button className="nav-cta" onClick={() => handleNav("#contact")}>
               Get Started
             </button>
           </li>
@@ -1054,7 +1059,7 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/digitalsolutionlogo.png" alt="Digital One Solutions" />
+            <img src="/new-dgone.png" alt="Digital One Solutions" />
             <p>Cloud. AI. Digital Business.</p>
             <p className="footer-tagline">
               The digital technology arm of JP Group.
